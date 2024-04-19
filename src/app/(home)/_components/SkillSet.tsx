@@ -1,7 +1,7 @@
-import Image from "next/image";
-import { Grid, GridItem, Box, Text } from "@yamada-ui/react";
-import SkillSetIcon from "@/app/_components/SkillSetIcon";
-export default function Home() {
+import { Box } from "@yamada-ui/react";
+import SkillSetIcon from "./SkillSetIcon";
+
+export const SkillSet = () => {
   return (
     <Box>
       <SkillSetIcon
@@ -18,4 +18,4 @@ export default function Home() {
       <a href='https://github.com/yamada-ui/yamada-ui'>Yamada UI</a>
     </Box>
   );
-}
+};
