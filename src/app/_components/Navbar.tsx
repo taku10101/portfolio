@@ -1,31 +1,37 @@
 "use client";
 import {
-  useDisclosure,
-  Button,
-  Collapse,
-  FocusLock,
-  VStack,
-  Input,
-  Box,
+  Menu,
+  MenuButton,
+  MenuItem,
+  IconButton,
+  MenuList,
 } from "@yamada-ui/react";
-import React from "react";
-
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faBars,
+  faQuestion,
+  faLaptop,
+  faPerson,
+} from "@fortawesome/free-solid-svg-icons";
 const Navbar = () => {
-  const { isOpen, onToggle } = useDisclosure();
-
   return (
-    <Box onMouseEnter={() => onToggle()} onMouseLeave={() => onToggle()}>
-      Hover me
-      <Collapse isOpen={isOpen}>
-        <FocusLock>
-          <VStack py='md' h={400}>
-            <Input placeholder='This is Input' />
+    <Menu>
+      <MenuButton
+        as={IconButton}
+        icon={<FontAwesomeIcon icon={faBars} />}
+        variant='outline'
+      />
 
-            <Button alignSelf='center'>Button</Button>
-          </VStack>
-        </FocusLock>
-      </Collapse>
-    </Box>
+      <MenuList>
+        <MenuItem icon={<FontAwesomeIcon icon={faPerson} />}>
+          プロフィール
+        </MenuItem>
+        <MenuItem icon={<FontAwesomeIcon icon={faLaptop} />}>
+          ハッカソン
+        </MenuItem>
+        <MenuItem icon={<FontAwesomeIcon icon={faQuestion} />}>Q&A</MenuItem>
+      </MenuList>
+    </Menu>
   );
 };
 

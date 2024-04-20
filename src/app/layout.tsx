@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
-import "./globals.css";
 
 import { UIProvider } from "@yamada-ui/react";
 import Navbar from "./_components/Navbar";
@@ -19,10 +18,12 @@ export default function RootLayout({
   return (
     <html lang='ja'>
       <head></head>
-      <body className={inter.className}>
-        <Navbar />
-        <UIProvider>{children}</UIProvider>
-      </body>
+      <UIProvider>
+        <body className={inter.className}>
+          <Navbar />
+          {children}
+        </body>
+      </UIProvider>
     </html>
   );
 }

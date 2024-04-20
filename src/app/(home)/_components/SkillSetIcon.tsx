@@ -1,5 +1,5 @@
 import React from "react";
-import { Image, Text } from "@yamada-ui/react";
+import { Image, Text, Box } from "@yamada-ui/react";
 
 type SkillSetIconProps = {
   label: string;
@@ -9,10 +9,10 @@ type SkillSetIconProps = {
 const SkillSetIcon = (props: SkillSetIconProps) => {
   const { label, src, alt } = props;
   return (
-    <>
+    <Box>
       <Text>{label} </Text>
       <Image src={src} alt={alt} />
-    </>
+    </Box>
   );
 };
 
