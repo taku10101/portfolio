@@ -1,16 +1,10 @@
-import Card from "./_components/card";
+import { Box, Grid } from "@yamada-ui/react";
+import PerformanceCardList from "./_components/performanceCardList";
 const page = () => {
   return (
-    <div>
-      <Card
-        title={"svdv"}
-        image={
-          "https://images.unsplash.com/photo-1634171016843-9f1c4c8a4f1d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwyMzQwMzV8MHwxfGFsbHwxf"
-        }
-        alt={""}
-        page={"/"}
-      />
-    </div>
+    <Box mx={3} m={"auto"}>
+      <PerformanceCardList />
+    </Box>
   );
 };
 
