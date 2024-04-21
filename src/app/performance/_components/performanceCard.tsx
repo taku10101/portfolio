@@ -1,5 +1,12 @@
 import React from "react";
-import { AspectRatio, Image, Box, Text, Center } from "@yamada-ui/react";
+import {
+  AspectRatio,
+  Image,
+  Box,
+  Text,
+  Center,
+  GridItem,
+} from "@yamada-ui/react";
 import LinkButton from "./linkButton";
 
 type CardProps = {
@@ -12,14 +19,11 @@ type CardProps = {
 const PerformanceCard = (props: CardProps) => {
   const { title, image, alt, presentation, page } = props;
   return (
-    <Box
-      w={600}
-      border={"1px solid #e2e8f0"}
-      p={4}
+    <GridItem
+      w='full'
       shadow={"xl"}
-      borderRadius={"md"}
-      textAlign={"center"}
-      m={"auto"}
+      borderRadius={8}
+      border={"1px solid #e2e8f0"}
     >
       <AspectRatio
         ratio={16 / 9}
@@ -36,7 +40,7 @@ const PerformanceCard = (props: CardProps) => {
         {title}
       </Text>
       <LinkButton presentation={presentation!} page={page!} />
-    </Box>
+    </GridItem>
   );
 };
 

@@ -5,7 +5,13 @@ import PerformanceCard from "./performanceCard";
 const performanceCardList = () => {
   return (
     <Box mx={3}>
-      <Grid templateColumns='repeat(2, 2fr)'>
+      <Grid
+        templateColumns='repeat(2, 2fr)'
+        w={"85%"}
+        m={"auto"}
+        gap={4}
+        mt={3}
+      >
         <PerformanceCard
           title={"SchemaCreator"}
           image={"/recall_mate.png"}
