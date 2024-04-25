@@ -1,5 +1,5 @@
 "use client";
-import { Image, Text, Box } from "@yamada-ui/react";
+import { Image, Box } from "@yamada-ui/react";
 
 type SkillSetIconProps = {
   src: string;
