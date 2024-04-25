@@ -7,14 +7,11 @@ import {
   Box,
 } from "@yamada-ui/react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faBars,
-  faQuestion,
-  faLaptop,
-  faPerson,
-} from "@fortawesome/free-solid-svg-icons";
+import { faLaptop, faPerson } from "@fortawesome/free-solid-svg-icons";
+import { RxHamburgerMenu } from "react-icons/rx";
 import Link from "next/link";
-function Navbar() {
+
+const Navbar = async () => {
   return (
     <Box
       sx={{
@@ -27,26 +24,22 @@ function Navbar() {
       <Menu>
         <MenuButton
           as={IconButton}
-          icon={<FontAwesomeIcon icon={faBars} />}
+          icon={<RxHamburgerMenu />}
           variant='outline'
         />
 
         <MenuList>
           <Link href={"/"}>
-            <MenuItem icon={<FontAwesomeIcon icon={faPerson} />}>
-              プロフィール
-            </MenuItem>
+            <MenuItem>プロフィール</MenuItem>
           </Link>
 
           <Link href='/performance'>
-            <MenuItem icon={<FontAwesomeIcon icon={faLaptop} />}>
-              ハッカソン
-            </MenuItem>
+            <MenuItem>ハッカソン</MenuItem>
           </Link>
         </MenuList>
       </Menu>
     </Box>
   );
-}
+};
 
 export default Navbar;
