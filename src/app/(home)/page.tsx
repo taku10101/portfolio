@@ -1,6 +1,6 @@
 import { CommunityCard } from "./_components/CommunityCard";
 import { Profile } from "./_components/ProfileCard";
-import { SkillSet } from "./_components/SkillSetCard";
+import { SkillSetCard } from "./_components/SkillSetCard";
 import { Box, Flex } from "@yamada-ui/react";
 export default function Home() {
   return (
@@ -20,7 +20,7 @@ export default function Home() {
         }}
       >
         <Profile />
-        <SkillSet />
+        <SkillSetCard />
       </Flex>
       <CommunityCard />
     </Box>
