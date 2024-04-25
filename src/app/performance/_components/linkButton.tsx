@@ -4,7 +4,7 @@ type LinkButtonProps = {
   presentation?: string;
   page: string;
 };
-const LinkButton = (props: LinkButtonProps) => {
+async function LinkButton(props: LinkButtonProps) {
   const { presentation, page } = props;
   return (
     <Center gap='md' m={"auto"} textAlign={"center"}>
@@ -27,6 +27,6 @@ const LinkButton = (props: LinkButtonProps) => {
       </Box>
     </Center>
   );
-};
+}
 
 export default LinkButton;

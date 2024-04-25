@@ -1,7 +1,7 @@
 import { Card, Text, Box, Avatar, Flex } from "@yamada-ui/react";
 import React from "react";
 
-export const CommunityCard = () => {
+export function CommunityCard() {
   return (
     <Box>
       <Card
@@ -40,4 +40,4 @@ export const CommunityCard = () => {
       </Card>
     </Box>
   );
-};
+}

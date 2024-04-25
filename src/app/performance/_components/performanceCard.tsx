@@ -16,7 +16,7 @@ type CardProps = {
   presentation?: string;
   page?: string;
 };
-const PerformanceCard = (props: CardProps) => {
+async function PerformanceCard(props: CardProps) {
   const { title, image, alt, presentation, page } = props;
   return (
     <GridItem
@@ -44,6 +44,6 @@ const PerformanceCard = (props: CardProps) => {
       <LinkButton presentation={presentation!} page={page!} />
     </GridItem>
   );
-};
+}
 
 export default PerformanceCard;

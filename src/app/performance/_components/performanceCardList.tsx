@@ -2,7 +2,7 @@ import { Box, Grid } from "@yamada-ui/react";
 import React from "react";
 import PerformanceCard from "./performanceCard";
 
-const performanceCardList = () => {
+async function performanceCardList() {
   return (
     <Box mx={3}>
       <Grid
@@ -43,6 +43,6 @@ const performanceCardList = () => {
       </Grid>
     </Box>
   );
-};
+}
 
 export default performanceCardList;

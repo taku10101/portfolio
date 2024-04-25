@@ -2,7 +2,7 @@ import { Box, Card, Center, Text } from "@yamada-ui/react";
 import React from "react";
 import SkillSetIcon from "./SkillSetIcon";
 
-export const UseLang = () => {
+export async function UseLang() {
   return (
     <Box>
       <Card
@@ -37,4 +37,4 @@ export const UseLang = () => {
       </Card>
     </Box>
   );
-};
+}

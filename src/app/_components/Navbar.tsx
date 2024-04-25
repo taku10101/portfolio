@@ -14,7 +14,7 @@ import {
   faPerson,
 } from "@fortawesome/free-solid-svg-icons";
 import Link from "next/link";
-async function Navbar() {
+function Navbar() {
   return (
     <Box
       sx={{

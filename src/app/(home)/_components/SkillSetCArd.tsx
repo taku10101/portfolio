@@ -1,7 +1,7 @@
 import { Text, Card, Flex, Box } from "@yamada-ui/react";
 import SkillSetIcon from "./SkillSetIcon";
 
-export const SkillSet = () => {
+export function SkillSet() {
   return (
     <Box>
       <Card
@@ -37,4 +37,4 @@ export const SkillSet = () => {
       </Card>
     </Box>
   );
-};
+}

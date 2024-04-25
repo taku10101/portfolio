@@ -1,4 +1,3 @@
-"use client";
 import { CommunityCard } from "./_components/CommunityCard";
 import { Profile } from "./_components/ProfileCard";
 import { SkillSet } from "./_components/SkillSetCard";

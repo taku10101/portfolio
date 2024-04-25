@@ -1,7 +1,7 @@
 import { Avatar, Box, Card, Center, Flex, Text } from "@yamada-ui/react";
 import React from "react";
 
-export const Profile = () => {
+export function Profile() {
   const profile = [
     {
       label: "得意領域",
@@ -28,8 +28,11 @@ export const Profile = () => {
           height: "500px",
           width: "500px",
           p: 4,
+          mr: 4,
+
           boxShadow: "lg",
           borderRadius: "lg",
+          border: "1px solid #e2e8f0",
         }}
       >
         <Text
@@ -101,4 +104,4 @@ export const Profile = () => {
       </Card>
     </Center>
   );
-};
+}
