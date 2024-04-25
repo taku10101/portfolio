@@ -1,13 +1,4 @@
-import {
-  Avatar,
-  Box,
-  Card,
-  CardBody,
-  CardHeader,
-  Center,
-  Flex,
-  Text,
-} from "@yamada-ui/react";
+import { Avatar, Box, Card, Center, Flex, Text } from "@yamada-ui/react";
 import React from "react";
 
 export const Profile = () => {
@@ -34,15 +25,16 @@ export const Profile = () => {
     <Center>
       <Card
         sx={{
+          height: "500px",
           width: "500px",
           p: 4,
           boxShadow: "lg",
+          borderRadius: "lg",
         }}
       >
         <Text
           sx={{
             fontSize: "30px",
-
             textAlign: "left",
           }}
         >
@@ -76,6 +68,7 @@ export const Profile = () => {
         <Box
           sx={{
             mt: 4,
+            textAlign: "left",
           }}
         >
           {profile.map((item) => (
@@ -88,8 +81,7 @@ export const Profile = () => {
             >
               <Text
                 sx={{
-                  fontSize: "20px",
-                  fontWeight: "bold",
+                  fontSize: "25px",
                   ml: 2,
                 }}
               >
@@ -97,7 +89,7 @@ export const Profile = () => {
               </Text>
               <Text
                 sx={{
-                  fontSize: "1    8px",
+                  fontSize: "20x",
                   ml: 2,
                 }}
               >

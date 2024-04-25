@@ -1,10 +1,10 @@
-"use client";
 import {
   Menu,
   MenuButton,
   MenuItem,
   IconButton,
   MenuList,
+  Box,
 } from "@yamada-ui/react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
@@ -13,26 +13,40 @@ import {
   faLaptop,
   faPerson,
 } from "@fortawesome/free-solid-svg-icons";
-const Navbar = () => {
+import Link from "next/link";
+async function Navbar() {
   return (
-    <Menu>
-      <MenuButton
-        as={IconButton}
-        icon={<FontAwesomeIcon icon={faBars} />}
-        variant='outline'
-      />
+    <Box
+      sx={{
+        position: "fixed",
+        top: 0,
+        left: 0,
+        m: 4,
+      }}
+    >
+      <Menu>
+        <MenuButton
+          as={IconButton}
+          icon={<FontAwesomeIcon icon={faBars} />}
+          variant='outline'
+        />
 
-      <MenuList>
-        <MenuItem icon={<FontAwesomeIcon icon={faPerson} />}>
-          プロフィール
-        </MenuItem>
-        <MenuItem icon={<FontAwesomeIcon icon={faLaptop} />}>
-          ハッカソン
-        </MenuItem>
-        <MenuItem icon={<FontAwesomeIcon icon={faQuestion} />}>Q&A</MenuItem>
-      </MenuList>
-    </Menu>
+        <MenuList>
+          <Link href={"/"}>
+            <MenuItem icon={<FontAwesomeIcon icon={faPerson} />}>
+              プロフィール
+            </MenuItem>
+          </Link>
+
+          <Link href='/performance'>
+            <MenuItem icon={<FontAwesomeIcon icon={faLaptop} />}>
+              ハッカソン
+            </MenuItem>
+          </Link>
+        </MenuList>
+      </Menu>
+    </Box>
   );
-};
+}
 
 export default Navbar;
