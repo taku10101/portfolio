@@ -16,7 +16,7 @@ type CardProps = {
   presentation?: string;
   page?: string;
 };
-async function PerformanceCard(props: CardProps) {
+function PerformanceCard(props: CardProps) {
   const { title, image, alt, presentation, page } = props;
   return (
     <GridItem

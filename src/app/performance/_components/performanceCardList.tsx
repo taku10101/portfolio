@@ -2,7 +2,7 @@ import { Box, Grid } from "@yamada-ui/react";
 import React from "react";
 import PerformanceCard from "./performanceCard";
 
-async function performanceCardList() {
+function performanceCardList() {
   return (
     <Box mx={3}>
       <Grid

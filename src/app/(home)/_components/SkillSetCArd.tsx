@@ -1,7 +1,7 @@
 import { Text, Card, Flex, Box } from "@yamada-ui/react";
 import SkillSetIcon from "./SkillSetIcon";
 
-export function SkillSet() {
+export async function SkillSetCard() {
   return (
     <Box>
       <Card
