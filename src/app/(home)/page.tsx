@@ -1,7 +1,8 @@
 import { CommunityCard } from "./_components/CommunityCard";
 import { Profile } from "./_components/ProfileCard";
-import { SkillSetCard } from "./_components/SkillSetCard";
 import { Box, Flex } from "@yamada-ui/react";
+import { SkillSetCard } from "./_components/SkillCard";
+
 export default function Home() {
   return (
     <Box
