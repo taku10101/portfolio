@@ -18,13 +18,13 @@ function LinkButton(props: LinkButtonProps) {
         </Box>
       )}
 
-      <Box>
+      {/* <Box>
         <Link href={page} isExternal>
           <Button textAlign='center' mt={2} mb={4} w={240}>
             詳細ページへ
           </Button>
         </Link>
-      </Box>
+      </Box> */}
     </Center>
   );
 }
