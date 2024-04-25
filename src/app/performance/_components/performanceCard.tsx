@@ -32,7 +32,9 @@ const PerformanceCard = (props: CardProps) => {
         m={"auto"}
         mb={4}
         mt={2}
+        border={"1px solid #e2e8f0"}
         shadow={"xl"}
+        rounded={"xl"}
       >
         <Image src={image} alt={alt} width={400} height={225} />
       </AspectRatio>

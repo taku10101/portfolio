@@ -1,4 +1,3 @@
-import React from "react";
 import { Image, Text, Box } from "@yamada-ui/react";
 
 type SkillSetIconProps = {
