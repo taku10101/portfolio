@@ -14,11 +14,21 @@ function performanceCardList() {
       >
         <PerformanceCard
           title={"SchemaCreator"}
-          image={"/recall_mate.png"}
+          image={"/schema_creator.png"}
           alt={""}
           page={"/"}
           presentation={
             "https://docs.google.com/presentation/d/11c_d8L0afDumXIkq_I7PaLniuNadmEG8ORD0o8wZ3Lg/edit?usp=sharing"
+          }
+        />
+
+        <PerformanceCard
+          title={"HackPortal"}
+          image={"/hack_hack.png"}
+          alt={""}
+          page={"/"}
+          presentation={
+            "https://www.canva.com/design/DAFoj4q5uw0/uyhnGQGDlNWhic4xBpIi1w/edit?utm_content=DAFoj4q5uw0&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton"
           }
         />
 

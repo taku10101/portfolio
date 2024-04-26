@@ -23,6 +23,7 @@ function PerformanceCard(props: CardProps) {
       w='full'
       shadow={"xl"}
       borderRadius={8}
+      p={3}
       border={"1px solid #e2e8f0"}
     >
       <AspectRatio
@@ -32,6 +33,7 @@ function PerformanceCard(props: CardProps) {
         m={"auto"}
         mb={4}
         mt={2}
+        p={2}
         border={"1px solid #e2e8f0"}
         shadow={"xl"}
         rounded={"xl"}
