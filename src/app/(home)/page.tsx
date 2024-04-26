@@ -8,7 +8,7 @@ export default function Home() {
     <Box
       sx={{
         mt: 4,
-        width: "85vw",
+        width: "1250px",
         m: "auto",
         alignItems: "center",
         justifyContent: "between",
@@ -24,7 +24,7 @@ export default function Home() {
         <Profile />
         <SkillSetCard />
       </Flex>
-      <Box sx={{ width: "85vw", m: "auto", mt: 4 }}>
+      <Box sx={{ m: "auto", mt: 4 }}>
         <CommunityCard />
       </Box>
     </Box>
