@@ -9,6 +9,7 @@ export function CommunityCard() {
           p: 6,
           boxShadow: "lg",
           borderRadius: "lg",
+          width: "1250px",
         }}
       >
         <Text

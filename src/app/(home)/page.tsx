@@ -24,7 +24,7 @@ export default function Home() {
         <Profile />
         <SkillSetCard />
       </Flex>
-      <Box sx={{ mt: 4 }}>
+      <Box sx={{ width: "85vw", m: "auto", mt: 4 }}>
         <CommunityCard />
       </Box>
     </Box>
