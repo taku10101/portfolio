@@ -7,7 +7,6 @@ export function CommunityCard() {
       <Card
         sx={{
           p: 6,
-          height: "550px",
           boxShadow: "lg",
           borderRadius: "lg",
         }}
