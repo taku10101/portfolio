@@ -7,7 +7,7 @@ export function SkillSetCard() {
       <Card
         sx={{
           height: "500px",
-          p: 4,
+          p: 6,
           boxShadow: "lg",
           borderRadius: "lg",
         }}

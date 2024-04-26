@@ -19,11 +19,14 @@ export default function Home() {
           justifyContent: "between",
           mt: 4,
         }}
+        gap={4}
       >
         <Profile />
         <SkillSetCard />
       </Flex>
-      <CommunityCard />
+      <Box sx={{ mt: 4 }}>
+        <CommunityCard />
+      </Box>
     </Box>
   );
 }

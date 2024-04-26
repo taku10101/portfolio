@@ -8,7 +8,7 @@ export function UseLang() {
       <Card
         sx={{
           margin: "auto",
-          p: 4,
+          p: 6,
           boxShadow: "lg",
           borderRadius: "lg",
           width: "650px",
