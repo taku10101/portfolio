@@ -1,4 +1,5 @@
 import { Avatar, Box, Card, Center, Flex, Text } from "@yamada-ui/react";
+import Link from "next/link";
 import React from "react";
 
 export const Profile = () => {
@@ -14,10 +15,12 @@ export const Profile = () => {
     {
       label: "GitHub",
       value: "taku10101",
+      link: "https://github.com/taku10101",
     },
     {
       label: "Twitter",
       value: "@taku10101",
+      link: "https://twitter.com/taku10101",
     },
   ];
 
@@ -72,30 +75,31 @@ export const Profile = () => {
           }}
         >
           {profile.map((item) => (
-            <Flex
-              key={item.label}
-              sx={{
-                mt: 2,
-                alignItems: "center",
-              }}
-            >
-              <Text
+            <Link key={item.label} href={item.link || "#"}>
+              <Flex
                 sx={{
-                  fontSize: "25px",
-                  ml: 2,
+                  mt: 2,
+                  alignItems: "center",
                 }}
               >
-                {item.label}
-              </Text>
-              <Text
-                sx={{
-                  fontSize: "20x",
-                  ml: 2,
-                }}
-              >
-                {item.value}
-              </Text>
-            </Flex>
+                <Text
+                  sx={{
+                    fontSize: "25px",
+                    ml: 2,
+                  }}
+                >
+                  {item.label}
+                </Text>
+                <Text
+                  sx={{
+                    fontSize: "20px",
+                    ml: 2,
+                  }}
+                >
+                  {item.value}
+                </Text>
+              </Flex>
+            </Link>
           ))}
         </Box>
       </Card>
