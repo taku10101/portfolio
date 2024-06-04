@@ -83,7 +83,7 @@ export function CommunityCard() {
               fontSize: "20px",
             }}
           >
-            ・TechTrain,Progateなどとのアンバサダー契約の提携による各サービスの無料提供
+            ・TechTrain,Progate,paizaなどとのアンバサダー契約の提携による各サービスの無料提供
             <br />
             ・MatsuribaTech主催のカンファレンスにおけるブース展示
             <br />
