@@ -1,101 +1,245 @@
-import Image from "next/image";
+"use client";
 
-export default function Home() {
+import { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+import {
+  Briefcase,
+  Code,
+  GraduationCap,
+  Layers,
+  ChevronRight,
+} from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { Card, CardContent } from "@/components/ui/card";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+
+const BubblyBackground = () => {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
+    <div className='absolute inset-0 overflow-hidden pointer-events-none'>
+      {[...Array(20)].map((_, i) => (
+        <motion.div
+          key={i}
+          className='absolute rounded-full bg-blue-300 opacity-20'
+          initial={{
+            x: Math.random() * window.innerWidth,
+            y: Math.random() * window.innerHeight,
+            scale: Math.random() * 0.5 + 0.5,
+          }}
+          animate={{
+            x: Math.random() * window.innerWidth,
+            y: Math.random() * window.innerHeight,
+            transition: {
+              duration: Math.random() * 10 + 10,
+              repeat: Infinity,
+              repeatType: "reverse",
+            },
+          }}
+          style={{
+            width: `${Math.random() * 100 + 50}px`,
+            height: `${Math.random() * 100 + 50}px`,
+          }}
         />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
+      ))}
+    </div>
+  );
+};
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
+export default function Portfolio() {
+  const [activeTab, setActiveTab] = useState("about");
+
+  const tabs = [
+    { id: "about", label: "About Me", icon: GraduationCap },
+    { id: "skills", label: "Skills", icon: Code },
+    { id: "projects", label: "Projects", icon: Layers },
+    { id: "experience", label: "Experience", icon: Briefcase },
+  ];
+
+  return (
+    <div className='min-h-screen bg-gradient-to-br from-blue-400 via-blue-500 to-indigo-600 p-8 relative'>
+      <BubblyBackground />
+      <Card className='max-w-4xl mx-auto bg-white/90 backdrop-blur-md overflow-hidden relative z-10'>
+        <CardContent className='p-6'>
+          <motion.h1
+            className='text-4xl font-bold text-center mb-6 text-blue-600'
+            initial={{ y: -50, opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
+            transition={{ duration: 0.5 }}
           >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
+            Your Name's Portfolio
+          </motion.h1>
+
+          <motion.div
+            className='mb-6 p-4 bg-blue-100 rounded-lg text-blue-800 text-center'
+            initial={{ opacity: 0, scale: 0.8 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.5 }}
           >
-            Read our docs
-          </a>
-        </div>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+            <h2 className='text-2xl font-semibold mb-2'>
+              Welcome to My Creative Space!
+            </h2>
+            <p>
+              Explore my projects, skills, and experiences in web development
+              and design.
+            </p>
+          </motion.div>
+
+          <Tabs
+            value={activeTab}
+            onValueChange={setActiveTab}
+            className='w-full'
+          >
+            <TabsList className='grid w-full grid-cols-4 gap-4'>
+              {tabs.map((tab) => (
+                <TabsTrigger
+                  key={tab.id}
+                  value={tab.id}
+                  className='flex items-center justify-center p-2 bg-blue-100 hover:bg-blue-200 text-blue-600'
+                >
+                  <tab.icon className='w-5 h-5 mr-2' />
+                  {tab.label}
+                </TabsTrigger>
+              ))}
+            </TabsList>
+
+            <AnimatePresence mode='wait'>
+              <motion.div
+                key={activeTab}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: -20 }}
+                transition={{ duration: 0.3 }}
+              >
+                <TabsContent value='about' className='mt-6'>
+                  <h2 className='text-2xl font-semibold mb-4 text-blue-600'>
+                    About Me
+                  </h2>
+                  <p className='text-gray-700'>
+                    こんにちは！私は[あなたの名前]です。クリエイティブで革新的なウェブ開発に情熱を注いでいます。
+                    最新のテクノロジーを活用し、ユーザーフレンドリーで魅力的なウェブアプリケーションを作ることが私の目標です。
+                    常に新しいチャレンジを求め、技術の最前線に立ち続けることを心がけています。
+                  </p>
+                </TabsContent>
+
+                <TabsContent value='skills' className='mt-6'>
+                  <h2 className='text-2xl font-semibold mb-4 text-blue-600'>
+                    Skills & Tech Stack
+                  </h2>
+                  <div className='grid grid-cols-2 md:grid-cols-3 gap-4'>
+                    {[
+                      "JavaScript",
+                      "React",
+                      "Node.js",
+                      "Python",
+                      "CSS/Sass",
+                      "Git",
+                      "TypeScript",
+                      "Next.js",
+                      "Tailwind CSS",
+                    ].map((skill) => (
+                      <motion.div
+                        key={skill}
+                        className='bg-blue-100 rounded-full px-4 py-2 text-center text-blue-600'
+                        whileHover={{ scale: 1.05, backgroundColor: "#93C5FD" }}
+                        whileTap={{ scale: 0.95 }}
+                      >
+                        {skill}
+                      </motion.div>
+                    ))}
+                  </div>
+                </TabsContent>
+
+                <TabsContent value='projects' className='mt-6'>
+                  <h2 className='text-2xl font-semibold mb-4 text-blue-600'>
+                    Projects
+                  </h2>
+                  <div className='grid grid-cols-1 md:grid-cols-2 gap-6'>
+                    {[
+                      {
+                        title: "ポートフォリオサイト",
+                        desc: "React と Tailwind CSS を使用した個人ポートフォリオサイト",
+                      },
+                      {
+                        title: "タスク管理アプリ",
+                        desc: "Next.js と TypeScript で開発したフルスタックタスク管理アプリ",
+                      },
+                      {
+                        title: "天気予報ウィジェット",
+                        desc: "OpenWeatherMap API を使用したリアルタイム天気予報ウィジェット",
+                      },
+                      {
+                        title: "ブログプラットフォーム",
+                        desc: "Node.js と MongoDB を使用したフルスタックブログプラットフォーム",
+                      },
+                    ].map((project, index) => (
+                      <motion.div
+                        key={index}
+                        whileHover={{ scale: 1.05 }}
+                        whileTap={{ scale: 0.95 }}
+                      >
+                        <Card className='overflow-hidden'>
+                          <img
+                            src={`/placeholder.svg?height=150&width=300&text=${project.title}`}
+                            alt={project.title}
+                            className='w-full h-40 object-cover'
+                          />
+                          <CardContent className='p-4'>
+                            <h3 className='font-semibold mb-2'>
+                              {project.title}
+                            </h3>
+                            <p className='text-sm text-gray-600 mb-4'>
+                              {project.desc}
+                            </p>
+                            <Button
+                              variant='outline'
+                              size='sm'
+                              className='bg-blue-500 text-white hover:bg-blue-600'
+                            >
+                              詳細を見る{" "}
+                              <ChevronRight className='w-4 h-4 ml-2' />
+                            </Button>
+                          </CardContent>
+                        </Card>
+                      </motion.div>
+                    ))}
+                  </div>
+                </TabsContent>
+
+                <TabsContent value='experience' className='mt-6'>
+                  <h2 className='text-2xl font-semibold mb-4 text-blue-600'>
+                    Experience & Education
+                  </h2>
+                  <ul className='space-y-4'>
+                    <motion.li
+                      className='bg-blue-50 p-4 rounded-lg'
+                      whileHover={{ scale: 1.02 }}
+                    >
+                      <h3 className='font-semibold'>テックカンパニーX</h3>
+                      <p className='text-sm text-gray-600'>
+                        フロントエンドデベロッパー • 2022 - 現在
+                      </p>
+                      <p className='mt-2 text-gray-700'>
+                        最新のウェブテクノロジーを使用した大規模Webアプリケーションの開発と保守。
+                      </p>
+                    </motion.li>
+                    <motion.li
+                      className='bg-blue-50 p-4 rounded-lg'
+                      whileHover={{ scale: 1.02 }}
+                    >
+                      <h3 className='font-semibold'>Y大学</h3>
+                      <p className='text-sm text-gray-600'>
+                        情報工学学士 • 2018 - 2022
+                      </p>
+                      <p className='mt-2 text-gray-700'>
+                        コンピュータサイエンスと情報システムの基礎を学び、複数のプロジェクトに参加。
+                      </p>
+                    </motion.li>
+                  </ul>
+                </TabsContent>
+              </motion.div>
+            </AnimatePresence>
+          </Tabs>
+        </CardContent>
+      </Card>
     </div>
   );
 }
