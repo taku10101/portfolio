@@ -2,57 +2,16 @@
 
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import {
-  Briefcase,
-  Code,
-  GraduationCap,
-  Layers,
-  ChevronRight,
-} from "lucide-react";
+import { ChevronRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-
-const BubblyBackground = () => {
-  return (
-    <div className='absolute inset-0 overflow-hidden pointer-events-none'>
-      {[...Array(20)].map((_, i) => (
-        <motion.div
-          key={i}
-          className='absolute rounded-full bg-blue-300 opacity-20'
-          initial={{
-            x: Math.random() * window.innerWidth,
-            y: Math.random() * window.innerHeight,
-            scale: Math.random() * 0.5 + 0.5,
-          }}
-          animate={{
-            x: Math.random() * window.innerWidth,
-            y: Math.random() * window.innerHeight,
-            transition: {
-              duration: Math.random() * 10 + 10,
-              repeat: Infinity,
-              repeatType: "reverse",
-            },
-          }}
-          style={{
-            width: `${Math.random() * 100 + 50}px`,
-            height: `${Math.random() * 100 + 50}px`,
-          }}
-        />
-      ))}
-    </div>
-  );
-};
+import { BubblyBackground } from "./components/BubblyBackground";
+import { applicationList } from "./locales/application";
+import { tabs } from "./locales/tabList";
 
 export default function Portfolio() {
   const [activeTab, setActiveTab] = useState("about");
-
-  const tabs = [
-    { id: "about", label: "About Me", icon: GraduationCap },
-    { id: "skills", label: "Skills", icon: Code },
-    { id: "projects", label: "Projects", icon: Layers },
-    { id: "experience", label: "Experience", icon: Briefcase },
-  ];
 
   return (
     <div className='min-h-screen bg-gradient-to-br from-blue-400 via-blue-500 to-indigo-600 p-8 relative'>
@@ -126,15 +85,12 @@ export default function Portfolio() {
                   </h2>
                   <div className='grid grid-cols-2 md:grid-cols-3 gap-4'>
                     {[
-                      "JavaScript",
-                      "React",
-                      "Node.js",
-                      "Python",
-                      "CSS/Sass",
-                      "Git",
                       "TypeScript",
+                      "React",
                       "Next.js",
-                      "Tailwind CSS",
+                      "Kotlin",
+                      "Ruby on Rails",
+                      "",
                     ].map((skill) => (
                       <motion.div
                         key={skill}
@@ -153,24 +109,7 @@ export default function Portfolio() {
                     Projects
                   </h2>
                   <div className='grid grid-cols-1 md:grid-cols-2 gap-6'>
-                    {[
-                      {
-                        title: "ポートフォリオサイト",
-                        desc: "React と Tailwind CSS を使用した個人ポートフォリオサイト",
-                      },
-                      {
-                        title: "タスク管理アプリ",
-                        desc: "Next.js と TypeScript で開発したフルスタックタスク管理アプリ",
-                      },
-                      {
-                        title: "天気予報ウィジェット",
-                        desc: "OpenWeatherMap API を使用したリアルタイム天気予報ウィジェット",
-                      },
-                      {
-                        title: "ブログプラットフォーム",
-                        desc: "Node.js と MongoDB を使用したフルスタックブログプラットフォーム",
-                      },
-                    ].map((project, index) => (
+                    {applicationList.map((project, index) => (
                       <motion.div
                         key={index}
                         whileHover={{ scale: 1.05 }}
