@@ -15,7 +15,6 @@ export default function Portfolio() {
 
   return (
     <div className='min-h-screen bg-gradient-to-br from-blue-400 via-blue-500 to-indigo-600 p-8 relative'>
-      <BubblyBackground />
       <Card className='max-w-4xl mx-auto bg-white/90 backdrop-blur-md overflow-hidden relative z-10'>
         <CardContent className='p-6'>
           <motion.h1
