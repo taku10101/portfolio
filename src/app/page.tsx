@@ -127,15 +127,15 @@ export default function Portfolio() {
                   key={tab.id}
                   value={tab.id}
                   className={`
-                    flex-1 flex items-center justify-center p-3 rounded-lg
-                    transition-all duration-200
-                    data-[state=active]:bg-white data-[state=active]:shadow-sm
-                    data-[state=inactive]:bg-transparent data-[state=inactive]:text-[#084F8C]
-                    data-[state=active]:text-[#1081C7]
-                  `}
+       flex-1 flex items-center justify-center p-3 rounded-lg
+       transition-all duration-200
+       data-[state=active]:bg-white data-[state=active]:shadow-sm
+       data-[state=inactive]:bg-transparent data-[state=inactive]:text-[#084F8C]
+       data-[state=active]:text-[#1081C7]
+     `}
                 >
-                  <tab.icon className='w-5 h-5 mr-2' />
-                  {tab.label}
+                  <tab.icon className='w-5 h-5 md:mr-2' />
+                  <span className='hidden md:inline'>{tab.label}</span>
                 </TabsTrigger>
               ))}
             </TabsList>
