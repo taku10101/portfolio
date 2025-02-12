@@ -15,6 +15,7 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { skillDetails, skills } from "./location/skills";
 import { projects } from "./location/projects";
 import { experiences } from "./location/experiences";
+import { Avatar, AvatarImage } from "@/components/ui/avatar";
 
 const BubblyBackground = () => {
   return (
@@ -103,14 +104,20 @@ export default function Portfolio() {
       <Card className='max-w-4xl mx-auto bg-white/90 backdrop-blur-md overflow-hidden relative z-10 shadow-lg'>
         <CardContent className='p-6'>
           <h1 className='text-4xl font-bold text-center mb-6 text-[#084F8C] animate-fade-in'>
-            Your Name's Portfolio
+            Portfolio
           </h1>
-
           <div className='mb-6 p-4 bg-[#1399CF]/10 rounded-lg text-[#084F8C] text-center animate-slide-up'>
+            <Avatar className='mx-auto mb-4 w-32 h-32 border-4 border-[#1081C7] shadow-lg transition-transform duration-300 hover:scale-105'>
+              <AvatarImage
+                src='https://avatars.githubusercontent.com/u/109452865?v=4'
+                alt='プロフィール写真'
+                className='w-full h-full object-cover'
+              />
+            </Avatar>
             <h2 className='text-2xl font-semibold mb-2'>
               Welcome to My Creative Space
             </h2>
-            <p>
+            <p className='text-[#1081C7]'>
               Explore my projects, skills, and experiences in web development
               and design.
             </p>
@@ -146,9 +153,9 @@ export default function Portfolio() {
                   About Me
                 </h2>
                 <p className='text-gray-700'>
-                  こんにちは！私は[あなたの名前]です。クリエイティブで革新的なウェブ開発に情熱を注いでいます。
-                  最新のテクノロジーを活用し、ユーザーフレンドリーで魅力的なウェブアプリケーションを作ることが私の目標です。
-                  常に新しいチャレンジを求め、技術の最前線に立ち続けることを心がけています。
+                  Webエンジニアとして現場で培ったアクセシビリティー対応の知識と熱意を武器に、誰もが使いやすいデジタル体験を追求。
+                  OSSコントリビューターとしても活躍する傍ら、弊社ではアクセシビリティーを専門に担当。
+                  机上の学問にとどまらず、現場で培った洞察と熱意を持ち、具体的な課題解決に取り組んでいる。
                 </p>
               </TabsContent>
 

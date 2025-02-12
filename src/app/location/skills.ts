@@ -2,17 +2,17 @@ export const skillDetails: Record<
   string,
   { description: string; experience: string; projects: string[]; level: string }
 > = {
-  JavaScript: {
+  "React/Next": {
     description:
       "モダンなウェブ開発の中心となる言語です。ES6+の機能を活用し、非同期プログラミングやモジュール化されたコードの作成に熟練しています。",
-    experience: "5年以上",
+    experience: "1年い以上",
     projects: [
       "インタラクティブなウェブアプリケーション",
       "シングルページアプリケーション (SPA)",
     ],
     level: "上級",
   },
-  React: {
+  "Typescript/": {
     description:
       "コンポーネントベースのUI構築に特化したライブラリです。Hooksを活用し、効率的で再利用可能なコンポーネントの設計と実装ができます。",
     experience: "4年",

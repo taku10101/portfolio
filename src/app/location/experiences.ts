@@ -1,16 +1,33 @@
 export const experiences = [
   {
-    title: "テックカンパニーX",
-    position: "フロントエンドデベロッパー",
-    period: "2022 - 現在",
-    description:
-      "最新のウェブテクノロジーを使用した大規模Webアプリケーションの開発と保守。",
+    title: "HAL名古屋",
+    position: "Web学科",
+    period: "2023/04 - 現在",
+    description: "入学",
   },
   {
-    title: "Y大学",
-    position: "情報工学学士",
-    period: "2018 - 2022",
+    title: "株式会社コムスクエア",
+    position: "フロントエンドエンジニア",
+    period: "2023/09 - 2024/02",
+    description: "インターンチームのフロントエンドテックリード",
+  },
+  {
+    title: "株式会社エムケイシステム",
+    position: "Webエンジニア",
+    period: "2024/05 - 現在",
+    description: "在庫管理システム構築、社内システムのインフラ構築",
+  },
+  {
+    title: "株式会社Romanark",
+    position: "アクセシビリティエバンジェリスト",
+    period: "2024/12 - 現在",
     description:
-      "コンピュータサイエンスと情報システムの基礎を学び、複数のプロジェクトに参加。",
+      "アクセシビリティに関する探求・発信/プロダクトのアクセシビリティ担保",
+  },
+  {
+    title: "polyfit株式会社",
+    position: "Webエンジニア",
+    period: "2024/12 - 現在",
+    description: "学校/地域関連グループウェアアプリケーションの開発",
   },
 ];
