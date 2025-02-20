@@ -116,11 +116,10 @@ export default function Portfolio() {
               />
             </Avatar>
             <h2 className='text-2xl font-semibold mb-2'>
-              Welcome to My Creative Space
+              Welcome to My Portfolio!
             </h2>
             <p className='text-[#1081C7]'>
-              Explore my projects, skills, and experiences in web development
-              and design.
+              Web Developer & Accessibility Advocate
             </p>
           </div>
 
