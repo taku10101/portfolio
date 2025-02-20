@@ -191,7 +191,7 @@ export default function Portfolio() {
                         <Image
                           src={project.image}
                           width={400}
-                          height={200}
+                          height={300}
                           alt={project.title}
                           className='w-full h-40 object-cover'
                         />
