@@ -3,30 +3,35 @@ export const skillDetails: Record<
   { description: string; experience: string; projects: string[]; level: string }
 > = {
   "React/Next": {
-    description:
-      "モダンなウェブ開発の中心となる言語です。ES6+の機能を活用し、非同期プログラミングやモジュール化されたコードの作成に熟練しています。",
-    experience: "1年い以上",
+    description: "メイン領域",
+    experience: "1年以上",
     projects: [
-      "インタラクティブなウェブアプリケーション",
+      "様々な企業ので業務",
+      "大手インターンシップ",
       "シングルページアプリケーション (SPA)",
+      "PWAを用いたpush通知の実装",
     ],
-    level: "上級",
-  },
-  "Typescript/": {
-    description:
-      "コンポーネントベースのUI構築に特化したライブラリです。Hooksを活用し、効率的で再利用可能なコンポーネントの設計と実装ができます。",
-    experience: "4年",
-    projects: ["大規模なeコマースプラットフォーム", "社内管理ツール"],
-    level: "上級",
-  },
-  "Node.js": {
-    description:
-      "サーバーサイドJavaScriptの実行環境として使用しています。RESTful APIの構築やデータベース操作、ファイル処理などのバックエンド開発に活用しています。",
-    experience: "3年",
-    projects: ["APIサーバー", "リアルタイムチャットアプリケーション"],
     level: "中級",
   },
-  // 他のスキルも同様に追加...
+  Typescript: {
+    description: "メイン言語",
+    experience: "1年以上",
+    projects: ["業務におけるWeb開発"],
+    level: "中級",
+  },
+
+  "Ruby on Rails": {
+    description: "バックエンド開発",
+    experience: "1年未満",
+    projects: ["個人開発", "業務におけるWeb開発"],
+    level: "中級",
+  },
+  "Laravel/PHP": {
+    description: "バックエンド開発",
+    experience: "1年未満",
+    projects: ["個人開発", "業務におけるWeb開発"],
+    level: "中級",
+  },
 };
 
 export const skills = Object.keys(skillDetails);

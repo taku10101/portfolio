@@ -16,6 +16,7 @@ import { skillDetails, skills } from "./location/skills";
 import { projects } from "./location/projects";
 import { experiences } from "./location/experiences";
 import { Avatar, AvatarImage } from "@/components/ui/avatar";
+import Image from "next/image";
 
 const BubblyBackground = () => {
   return (
@@ -187,8 +188,10 @@ export default function Portfolio() {
                       className='transition-transform duration-200 hover:scale-105'
                     >
                       <Card className='overflow-hidden'>
-                        <img
-                          src={project.image || "/placeholder.svg"}
+                        <Image
+                          src={project.image}
+                          width={400}
+                          height={200}
                           alt={project.title}
                           className='w-full h-40 object-cover'
                         />
@@ -199,13 +202,16 @@ export default function Portfolio() {
                           <p className='text-sm text-gray-600 mb-4'>
                             {project.desc}
                           </p>
-                          <Button
-                            variant='outline'
-                            size='sm'
-                            className='bg-[#1081C7] text-white hover:bg-[#084F8C] transition-colors duration-200'
-                          >
-                            詳細を見る <ChevronRight className='w-4 h-4 ml-2' />
-                          </Button>
+                          <a href={`${project.link}`}>
+                            <Button
+                              variant='outline'
+                              size='sm'
+                              className='bg-[#1081C7] text-white hover:bg-[#084F8C] transition-colors duration-200'
+                            >
+                              詳細を見る
+                              <ChevronRight className='w-4 h-4 ml-2' />
+                            </Button>
+                          </a>
                         </CardContent>
                       </Card>
                     </div>
